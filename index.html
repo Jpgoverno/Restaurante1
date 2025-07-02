@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor de Casa | Restaurante de Comida Caseira</title>
+    <meta name="description" content="Restaurante especializado em comida caseira com ingredientes frescos e ambiente acolhedor. Venha sentir o verdadeiro sabor de casa.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Sabor de Casa</h1>
+                    <span>Restaurante & Café</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="localizacao.html">Localização</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="reservas.html" class="btn-reserva">Reservar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Sabor de Casa</h2>
+            <p>Comida caseira com ingredientes frescos</p>
+            <div class="hero-buttons">
+                <a href="cardapio.html" class="btn btn-primary">Ver Cardápio</a>
+                <a href="reservas.html" class="btn btn-secondary">Fazer Reserva</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós (Resumo) -->
+    <section class="sobre-resumo">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Nossa História</h2>
+                    <p>Há mais de 15 anos, o Sabor de Casa nasceu do sonho de trazer para a cidade o verdadeiro sabor da comida caseira, aquela feita com carinho e ingredientes selecionados.</p>
+                    <p>Nossa cozinha preserva receitas tradicionais passadas de geração em geração, com o toque especial dos nossos chefs que combinam técnicas modernas com o aconchego da comida de vó.</p>
+                    <a href="sobre.html" class="btn btn-outline">Conheça Nossa História</a>
+                </div>
+                <div class="sobre-image">
+                    <img src="img/ambiente/ambiente_acolhedor.jpeg" alt="Interior acolhedor do restaurante Sabor de Casa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaques do Cardápio -->
+    <section class="destaques">
+        <div class="container">
+            <h2>Destaques do Cardápio</h2>
+            <div class="destaques-grid">
+                <div class="destaque-item">
+                    <div class="destaque-img">
+                        <img src="img/pratos_principais/feijoada_completa.jpeg" alt="Feijoada Completa">
+                    </div>
+                    <div class="destaque-info">
+                        <h3>Feijoada Completa</h3>
+                        <p>Nossa tradicional feijoada servida com arroz, couve, farofa, laranja e torresmo.</p>
+                        <span class="preco">R$ 45,90</span>
+                    </div>
+                </div>
+                <div class="destaque-item">
+                    <div class="destaque-img">
+                        <img src="img/pratos_principais/frango_caipira_batatas.jpeg" alt="Frango Caipira">
+                    </div>
+                    <div class="destaque-info">
+                        <h3>Frango Caipira</h3>
+                        <p>Frango caipira cozido lentamente com batatas, cenoura e ervas frescas.</p>
+                        <span class="preco">R$ 39,90</span>
+                    </div>
+                </div>
+                <div class="destaque-item">
+                    <div class="destaque-img">
+                        <img src="img/pratos_principais/escondidinho_carne_seca.jpeg" alt="Escondidinho de Carne Seca">
+                    </div>
+                    <div class="destaque-info">
+                        <h3>Escondidinho de Carne Seca</h3>
+                        <p>Purê de mandioca cremoso com recheio de carne seca desfiada e queijo coalho gratinado.</p>
+                        <span class="preco">R$ 42,90</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destaques-footer">
+                <a href="cardapio.html" class="btn btn-primary">Ver Cardápio Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section class="testemunhos">
+        <div class="container">
+            <h2>O que dizem nossos clientes</h2>
+            <div class="testemunhos-slider">
+                <div class="testemunho-item active">
+                    <div class="testemunho-content">
+                        <p>"A melhor comida caseira que já experimentei em um restaurante. O ambiente é acolhedor e o atendimento é excelente. Recomendo o escondidinho de carne seca!"</p>
+                        <div class="testemunho-autor">
+                            <span class="nome">Maria Silva</span>
+                            <div class="estrelas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testemunho-item">
+                    <div class="testemunho-content">
+                        <p>"Frequento o Sabor de Casa há anos e nunca me decepcionei. A feijoada de sábado é imperdível e o ambiente familiar faz toda a diferença."</p>
+                        <div class="testemunho-autor">
+                            <span class="nome">João Pereira</span>
+                            <div class="estrelas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testemunho-item">
+                    <div class="testemunho-content">
+                        <p>"Levei minha família para almoçar no domingo e foi uma experiência incrível. As crianças adoraram o espaço kids e nós adultos nos deliciamos com pratos autênticos."</p>
+                        <div class="testemunho-autor">
+                            <span class="nome">Ana Oliveira</span>
+                            <div class="estrelas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testemunhos-controls">
+                <button class="prev-btn" aria-label="Testemunho anterior"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="next-btn" aria-label="Próximo testemunho"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações de Contato -->
+    <section class="info-contato">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sexta: 11h às 15h | 18h às 22h</p>
+                    <p>Sábados e Domingos: 11h às 16h | 18h às 23h</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Localização</h3>
+                    <p>Rua das Flores, 123 - Centro</p>
+                    <p>São Paulo - SP</p>
+                    <div class="mini-map" id="mini-map"></div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Contato</h3>
+                    <p>Telefone: (11) 3456-7890</p>
+                    <p>Email: contato@sabordecasa.com.br</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Sabor de Casa</h2>
+                    <p>Comida caseira com ingredientes frescos</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="cardapio.html">Cardápio</a></li>
+                            <li><a href="galeria.html">Galeria</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Informações</h3>
+                        <ul>
+                            <li><a href="localizacao.html">Localização</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                            <li><a href="reservas.html">Reservas</a></li>
+                            <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contato</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Centro</li>
+                            <li><i class="fas fa-phone-alt"></i> (11) 3456-7890</li>
+                            <li><i class="fas fa-envelope"></i> contato@sabordecasa.com.br</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabor de Casa. Todos os direitos reservados.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMiniMap" async defer></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

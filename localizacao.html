@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localização - Sabor de Casa | Restaurante de Comida Caseira</title>
+    <meta name="description" content="Encontre o Sabor de Casa, seu restaurante de comida caseira favorito. Veja nosso endereço, horários de funcionamento e como chegar.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/localizacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Sabor de Casa</h1>
+                    <span>Restaurante & Café</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="localizacao.html" class="active">Localização</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="reservas.html" class="btn-reserva">Reservar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner da Localização -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Nossa Localização</h1>
+            <p>Venha nos visitar e saborear o melhor da comida caseira</p>
+        </div>
+    </section>
+
+    <!-- Mapa Interativo -->
+    <section class="mapa-section">
+        <div class="container">
+            <div class="mapa-container">
+                <div id="mapa-completo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações de Localização -->
+    <section class="info-localizacao">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Endereço</h3>
+                    <p>Rua das Flores, 123 - Centro<br>São Paulo - SP<br>CEP: 01234-567</p>
+                    <a href="https://maps.google.com/?q=Rua+das+Flores,123,Centro,São+Paulo" target="_blank" class="btn btn-outline mt-2">Ver no Google Maps</a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horário de Funcionamento</h3>
+                    <ul class="horarios-lista">
+                        <li><span>Segunda a Quinta:</span> 11h30 às 15h00 | 18h30 às 22h30</li>
+                        <li><span>Sexta e Sábado:</span> 11h30 às 16h00 | 18h30 às 23h30</li>
+                        <li><span>Domingo:</span> 11h30 às 16h00</li>
+                        <li><span>Feriados:</span> 11h30 às 16h00</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Como Chegar</h3>
+                    <p>Estamos localizados no centro da cidade, próximo à Praça Central.</p>
+                    <ul class="como-chegar-lista">
+                        <li><i class="fas fa-subway"></i> <strong>Metrô:</strong> Estação Central (Linha Azul) - 5 min. a pé</li>
+                        <li><i class="fas fa-bus"></i> <strong>Ônibus:</strong> Linhas 123, 456 e 789</li>
+                        <li><i class="fas fa-parking"></i> <strong>Estacionamento:</strong> Conveniado a 50m (com manobrista)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rotas e Direções -->
+    <section class="rotas-section">
+        <div class="container">
+            <h2>Calcule sua Rota</h2>
+            <div class="rotas-container">
+                <div class="rotas-form">
+                    <div class="form-group">
+                        <label for="origem">Seu endereço de origem:</label>
+                        <input type="text" id="origem" placeholder="Digite seu endereço completo">
+                    </div>
+                    <div class="form-group">
+                        <label>Meio de transporte:</label>
+                        <div class="transporte-opcoes">
+                            <button class="transporte-btn active" data-mode="DRIVING">
+                                <i class="fas fa-car"></i>
+                                <span>Carro</span>
+                            </button>
+                            <button class="transporte-btn" data-mode="TRANSIT">
+                                <i class="fas fa-bus"></i>
+                                <span>Transporte Público</span>
+                            </button>
+                            <button class="transporte-btn" data-mode="WALKING">
+                                <i class="fas fa-walking"></i>
+                                <span>A pé</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="calcular-rota" class="btn btn-primary">Calcular Rota</button>
+                </div>
+                <div class="rotas-resultado">
+                    <div id="rotas-mapa"></div>
+                    <div id="rotas-instrucoes">
+                        <p class="instrucoes-placeholder">Preencha seu endereço de origem e clique em "Calcular Rota" para ver as direções.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Área de Entrega -->
+    <section class="entrega-section">
+        <div class="container">
+            <div class="entrega-content">
+                <div class="entrega-text">
+                    <h2>Entregamos em sua casa</h2>
+                    <p>Não pode vir até nós? Levamos o sabor da nossa comida caseira até você!</p>
+                    <p>Atendemos toda a região central e bairros próximos. Consulte nossa área de entrega:</p>
+                    <ul class="entrega-lista">
+                        <li><i class="fas fa-check"></i> Centro - Entrega em até 30 minutos</li>
+                        <li><i class="fas fa-check"></i> Bairros próximos - Entrega em até 45 minutos</li>
+                        <li><i class="fas fa-check"></i> Demais regiões - Consulte disponibilidade</li>
+                    </ul>
+                    <div class="entrega-contato">
+                        <p>Faça seu pedido:</p>
+                        <a href="tel:+551134567890" class="btn btn-primary"><i class="fas fa-phone-alt"></i> (11) 3456-7890</a>
+                        <a href="https://wa.me/5511987654321" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="entrega-image">
+                    <img src="img/restaurante_interior.webp" alt="Entrega do Restaurante Sabor de Casa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Sabor de Casa</h2>
+                    <p>Comida caseira com ingredientes frescos</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="cardapio.html">Cardápio</a></li>
+                            <li><a href="galeria.html">Galeria</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Informações</h3>
+                        <ul>
+                            <li><a href="localizacao.html">Localização</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                            <li><a href="reservas.html">Reservas</a></li>
+                            <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contato</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Centro</li>
+                            <li><i class="fas fa-phone-alt"></i> (11) 3456-7890</li>
+                            <li><i class="fas fa-envelope"></i> contato@sabordecasa.com.br</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabor de Casa. Todos os direitos reservados.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/localizacao.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGb3Tq0I4Xj9GfJxkzQnRlgzu_Xm8i7Vw&callback=initMaps" async defer></script>
+</body>
+</html>
